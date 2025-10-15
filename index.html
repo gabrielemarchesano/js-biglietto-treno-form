@@ -13,8 +13,8 @@
 <body>
   <div class="container py-5">
     <form>
-      <div class="row">
-        
+      <div class="row align-items-center">
+
         <div class="col-4">
           <div class="my-3">
             <label for="userInfo" class="form-label">Nome e cognome</label>
@@ -28,20 +28,41 @@
 
           <div class="my-3">
             <label for="km" class="form-label">Chilometri da percorrere</label>
-            <input name="km" type="number" id="kilometer-field" class="form-control" placeholder="Inserisci i chilometri">
+            <input name="km" type="number" id="kilometer-field" class="form-control"
+              placeholder="Inserisci i chilometri">
           </div>
-          
+
           <button id="button" class="btn btn-primary" type="submit">Invia</button>
         </div>
 
         <div class="col-8">
           <div class="card">
+            <div class="card-header">
+              <h5 class="my-3 text-center">Biglietto del treno</h5>
+            </div>
             <div class="card-body">
-              <h5 class="card-title text-center">Biglietto del treno</h5>
-              <div class="row">
-                <div class="col-3">
+              <div class="row text-center">
+
+                <div class="col">
+                  <h6 class="text-center">Nome e cognome</h6>
                   <p id="user-info"></p>
                 </div>
+
+                <div class="col">
+                  <h6 class="text-center">Età</h6>
+                  <p id="age-info"></p>
+                </div>
+
+                <div class="col">
+                  <h6 class="text-center">Offerta</h6>
+                  <p id="sales-info"></p>
+                </div>
+
+                <div class="col">
+                  <h6 class="text-center">Prezzo</h6>
+                  <p id="price-info"></p>
+                </div>
+
               </div>
             </div>
           </div>

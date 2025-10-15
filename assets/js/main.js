@@ -80,7 +80,7 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 const infoElement = document.getElementById("travel-info");
 
-let message;
+let result;
 
 
 
@@ -91,26 +91,36 @@ form.addEventListener("submit", (event) => {
   const kmValue = kmElement.value;
   
   const userInfoElement = document.getElementById("userInfo");
-  console.log(userInfoElement.value);
+ 
+  const userOutput = document.getElementById("user-info");
+  userOutput.innerText = userInfoElement.value; 
+
+  const ageOutput = document.getElementById("age-info");
+  ageOutput.innerText = `${ageValue} anni`;
+  
+  const salesOutput = document.getElementById("sales-info");
+  
+  const priceOutput = document.getElementById("price-info");
   
   //Controllo se l'utente è minorenne
   if(ageValue < 18){
     //Se lo è, applico lo sconto del 20%
     const under18Ticket = ticketPrice(kmValue, ticketTariff) * 0.80;
-    message = `Hai: ${ageValue} anni; Percorrerai: ${kmValue}km; Prezzo del biglietto: ${under18Ticket.toFixed(2)}€`;
+    priceOutput.innerHTML = `${under18Ticket.toFixed(2)}€`  
+    salesOutput.innerHTML = "Minorenne";
   } else if(ageValue > 65){ //Altrimenti se è over 65
     //Applico lo sconto del 60%
     const over65Ticket = ticketPrice(kmValue, ticketTariff) * 0.60;
-    message = `Hai: ${ageValue} anni; Percorrerai: ${kmValue}km; Prezzo del biglietto: ${over65Ticket.toFixed(2)}€`;
+    priceOutput.innerHTML = `${over65Ticket.toFixed(2)}€`
+    salesOutput.innerHTML = "Over 65";
   } else{ //Altrimenti
     //Non si applicano sconti
     const ticket = ticketPrice(kmValue, ticketTariff);
-    message = `Hai: ${ageValue} anni; Percorrerai: ${kmValue}km; Prezzo del biglietto: ${ticket.toFixed(2)}€`;
+    priceOutput.innerHTML = `${ticket.toFixed(2)}€`
+    salesOutput.innerHTML = "Basic";
   }
   
   infoElement.innerHTML = message;
 
-  const userOutput = document.getElementById("user-info");
-  userOutput.innerText = userInfoElement.value; 
 
 })
