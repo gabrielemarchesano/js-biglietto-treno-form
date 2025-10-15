@@ -27,8 +27,16 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 //Scrivere un programma che chieda all’utente:
 
 //Il numero di chilometri da percorrere
+//Creo la variabile per selezionare l'elemento input dell'età
+const ageElement = document.getElementById("age-field");
+//Stampo in console per un controllo
+console.log(ageElement);
 
 //Età del passeggero
+//Creo la variabile per selezionare l'elemento input dei chilometri
+const kmElement = document.getElementById("kilometer-field");
+//Stampo in console per un controllo
+console.log(kmElement);
 
 //Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 //il prezzo del biglietto è definito in base ai km (0.21 € al km)
