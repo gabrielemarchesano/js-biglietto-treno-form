@@ -60,7 +60,11 @@ form.addEventListener("submit", (event) => {
     //Se lo è, applico lo sconto del 20%
     const under18Ticket = ticketPrice(kmValue, ticketTariff) * 0.80;
     console.log(`Costo del biglietto under18: ${under18Ticket.toFixed(2)}€`);        
-  }
+  } else if(ageValue > 65){ //Altrimenti se è over 65
+    //Applico lo sconto del 60%
+    const over65Ticket = ticketPrice(kmValue, ticketTariff) * 0.60;
+    console.log(`Costo del biglietto over65: ${over65Ticket.toFixed(2)}€`);    
+  } 
   
 })
 
