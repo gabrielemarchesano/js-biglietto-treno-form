@@ -40,6 +40,10 @@ console.log(kmElement);
 
 //Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 //il prezzo del biglietto è definito in base ai km (0.21 € al km)
+const ticketTariff = 0.21;
+
+//Creo una funzione per il calcolo del prezzo del biglietto
+const ticketPrice = (km, tariff) => km * tariff;
 
 //va applicato uno sconto del 20% per i minorenni
 
