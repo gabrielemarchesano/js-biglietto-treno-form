@@ -45,6 +45,23 @@ const ticketTariff = 0.21;
 //Creo una funzione per il calcolo del prezzo del biglietto
 const ticketPrice = (km, tariff) => km * tariff;
 
-//va applicato uno sconto del 20% per i minorenni
+//Recupero il form
+const form = document.querySelector("form");
+
+//Creo l'evento del submit
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  //Creo le variabili dove salvare il valore inserito negli input
+  const ageValue = ageElement.value;
+  const kmValue = kmElement.value;
+
+  //Controllo se l'utente è minorenne
+  if(ageValue < 18){
+    //Se lo è, applico lo sconto del 20%
+    const under18Ticket = ticketPrice(kmValue, ticketTariff) * 0.80;
+    console.log(`Costo del biglietto under18: ${under18Ticket.toFixed(2)}€`);        
+  }
+  
+})
 
 //va applicato uno sconto del 40% per gli over 65
