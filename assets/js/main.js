@@ -64,7 +64,11 @@ form.addEventListener("submit", (event) => {
     //Applico lo sconto del 60%
     const over65Ticket = ticketPrice(kmValue, ticketTariff) * 0.60;
     console.log(`Costo del biglietto over65: ${over65Ticket.toFixed(2)}€`);    
-  } 
+  } else{ //Altrimenti
+    //Non si applicano sconti
+    const ticket = ticketPrice(kmValue, ticketTariff);
+    console.log(`Costo del biglietto: ${ticket}€`);    
+  }
   
 })
 
