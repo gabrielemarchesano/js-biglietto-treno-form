@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Biglietteria Form</title>
 </head>
+
 <body>
-  <div class="container text-center py-5">
+  <div class="container py-5">
     <form>
-      <input type="number" id="age-field" placeholder="Età">
-      <input type="number" id="kilometer-field" placeholder="Chilometri da percorrere">
-      <button id="button" type="submit">Invia</button>
+      <div class="row">
+        <div class="col-6">
+          <div class="my-3">
+            <label for="age" class="form-label">Età del passeggero</label>
+            <input class="form-control" name="age" type="number" id="age-field" placeholder="Età">
+          </div>
+
+          <div class="my-3">
+            <label for="km" class="form-label">Chilometri da percorrere</label>
+            <input name="km" type="number" id="kilometer-field" class="form-control" placeholder="Inserisci i chilometri">
+          </div>
+          <button id="button" class="btn btn-primary" type="submit">Invia</button>
+        </div>
+      </div>
     </form>
     <p id="travel-info"></p>
   </div>
 
   <script src="./assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
