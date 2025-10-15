@@ -14,7 +14,13 @@
   <div class="container py-5">
     <form>
       <div class="row">
-        <div class="col-6">
+        
+        <div class="col-4">
+          <div class="my-3">
+            <label for="userInfo" class="form-label">Nome e cognome</label>
+            <input name="user" type="text" id="userInfo" class="form-control" placeholder="Inserisci nome e cognome">
+          </div>
+
           <div class="my-3">
             <label for="age" class="form-label">Età del passeggero</label>
             <input class="form-control" name="age" type="number" id="age-field" placeholder="Età">
@@ -24,8 +30,23 @@
             <label for="km" class="form-label">Chilometri da percorrere</label>
             <input name="km" type="number" id="kilometer-field" class="form-control" placeholder="Inserisci i chilometri">
           </div>
+          
           <button id="button" class="btn btn-primary" type="submit">Invia</button>
         </div>
+
+        <div class="col-8">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Biglietto del treno</h5>
+              <div class="row">
+                <div class="col-3">
+                  <p id="user-info"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </form>
     <p id="travel-info"></p>

@@ -79,14 +79,19 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 */
 
 const infoElement = document.getElementById("travel-info");
+
 let message;
+
+
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   //Creo le variabili dove salvare il valore inserito negli input
   const ageValue = ageElement.value;
   const kmValue = kmElement.value;
-
+  
+  const userInfoElement = document.getElementById("userInfo");
+  console.log(userInfoElement.value);
   
   //Controllo se l'utente è minorenne
   if(ageValue < 18){
@@ -104,4 +109,8 @@ form.addEventListener("submit", (event) => {
   }
   
   infoElement.innerHTML = message;
+
+  const userOutput = document.getElementById("user-info");
+  userOutput.innerText = userInfoElement.value; 
+
 })
